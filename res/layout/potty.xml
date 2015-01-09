@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dogg="http://schemas.android.com/apk/res/edu.umkc.rjcmf.dogg" >
+
+    <edu.umkc.rjcmf.dogg.views.CursorSpinner
+        android:id="@+id/pet"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        dogg:auto_hide="false"
+        dogg:display_field="title"
+        dogg:uri="pets" />
+
+    <edu.umkc.rjcmf.dogg.views.DividerView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/divider_potty_info" />
+
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TableRow>
+            <TextView 
+                android:layout_height="50dp"
+                
+                />
+        </TableRow>
+
+        <TableRow>
+
+            <CheckBox
+                android:id="@+id/pee"
+                
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="8pt"
+                android:text="@string/pee_potty" />
+
+            <CheckBox
+                android:id="@+id/poo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="8pt"
+                android:text="@string/poo_potty" />
+
+            <edu.umkc.rjcmf.dogg.views.DateButton
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </TableRow>
+        
+                <TableRow>
+            <TextView 
+                android:layout_height="50dp"
+                
+                />
+        </TableRow>
+    </TableLayout>
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+</merge>

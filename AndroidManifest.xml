@@ -1,0 +1,95 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="edu.umkc.rjcmf.dogg"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="19" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <!-- Provider Info -->
+        <provider
+            android:name=".provider.PottyProvider"
+            android:authorities="edu.umkc.rjcmf.dogg" />
+
+        <activity
+            android:name=".Dogg"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Classes -->
+        <activity
+            android:name=".PottyActivity"
+            android:label="@string/title_potty" />
+        <activity
+            android:name=".PottyListActivity"
+            android:label="@string/title_potty_list" />
+        <activity
+            android:name=".PottyInfoActivity"
+            android:label="@string/title_potty_info"
+            android:parentActivityName="edu.umkc.rjcmf.dogg.PottyListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.umkc.rjcmf.dogg.Dogg" />
+        </activity>
+        <activity
+            android:name=".PetListActivity"
+            android:label="@string/title_pet_list" />
+        <activity
+            android:name=".PetActivity"
+            android:label="@string/title_pet"
+            android:parentActivityName="edu.umkc.rjcmf.dogg.Dogg"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.umkc.rjcmf.dogg.Dogg" />
+        </activity>
+        <activity
+            android:name=".PetTypeListActivity"
+            android:label="@string/title_pet_type_list"
+            android:parentActivityName="edu.umkc.rjcmf.dogg.Dogg"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.umkc.rjcmf.dogg.Dogg" />
+        </activity>
+        <activity
+            android:name=".PetTypeActivity"
+            android:label="@string/title_pet_type"
+            android:parentActivityName="edu.umkc.rjcmf.dogg.Dogg"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.umkc.rjcmf.dogg.Dogg" />
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_settings"
+            android:parentActivityName="edu.umkc.rjcmf.dogg.Dogg" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.umkc.rjcmf.dogg.Dogg" />
+        </activity>
+        <activity
+            android:name=".AboutActivity"
+            android:label="@string/title_about"
+            android:parentActivityName="edu.umkc.rjcmf.dogg.Dogg"
+            android:theme="@android:style/Theme.Dialog" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="edu.umkc.rjcmf.dogg.Dogg" />
+        </activity>
+    </application>
+
+</manifest>

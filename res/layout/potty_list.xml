@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:dogg="http://schemas.android.com/apk/res/edu.umkc.rjcmf.dogg"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+>
+	
+        <edu.umkc.rjcmf.dogg.views.CursorSpinner
+            android:id="@+id/pet"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            dogg:auto_hide="false"
+            dogg:display_field="title"
+            dogg:uri="pets" />
+	
+	<ListView
+		android:layout_width="fill_parent"
+		android:layout_height="0dp"
+		android:layout_weight="1"
+		android:fastScrollEnabled="true"
+		android:id="@android:id/list"
+	/>
+</LinearLayout>
